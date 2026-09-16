@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	const int PRICE_OF_TWO_CREDIT_TICKETS = 100; //Define the price of Two-Credit Tickets in cents// 
+
+	cout << "Please insert your money: " << endl; //Prompt the User for the amount of money inserted//
+	double customer_money; // Use double so we can take decimals //
+	cin >> customer_money;
+
+	int customer_money_in_cents = customer_money * 100; //Convert the input of the customer into a quantity we 
+	//can manipulate to figure out the number of Two-Credit Tickets we need to give. Multiply by 100 to convert to cents//
+	double number_of_dollar_tickets = customer_money_in_cents / PRICE_OF_TWO_CREDIT_TICKETS; 
+	double number_of_cent_tickets = customer_money_in_cents - (100.00 * number_of_dollar_tickets); //Subtract to figure out the number of One-Credit Tickets
+	// we need to give//
+
+	cout << endl << "Two-ride Tickets: " << setw(8) << number_of_dollar_tickets << endl
+		<< "One-ride Tickets: " << setw(8) << number_of_cent_tickets << endl << endl;
+
+	cout << "Please take your tickets" << endl << endl;
+	cout << "Have fun!" << endl;
+
+	return 0;	
+}
