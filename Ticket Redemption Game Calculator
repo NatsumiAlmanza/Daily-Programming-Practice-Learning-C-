@@ -17,8 +17,8 @@ int main()
 	double number_of_cent_tickets = customer_money_in_cents - (100.00 * number_of_dollar_tickets); //Subtract to figure out the number of One-Credit Tickets
 	// we need to give//
 
-	cout << endl << "Two-ride Tickets: " << setw(8) << number_of_dollar_tickets << endl
-		<< "One-ride Tickets: " << setw(8) << number_of_cent_tickets << endl << endl;
+	cout << endl << "Two-Credit Tickets: " << setw(8) << number_of_dollar_tickets << endl
+		<< "One-Credit Tickets: " << setw(8) << number_of_cent_tickets << endl << endl;
 
 	cout << "Please take your tickets" << endl << endl;
 	cout << "Have fun!" << endl;
