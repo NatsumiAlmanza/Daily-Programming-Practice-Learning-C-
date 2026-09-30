@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   cout << "Enter a word: " << endl;
+
+   string s; // Read user input. This is the word we will use.
+   cin >> s;
+   
+   string c = "";
+   
+   string r = ""; // create the string r
+   
+   int i = 0; // initialize variable i (our counting variable)
+   
+   while (i < s.length()) // while i < length of s
+   {
+      c = (s.substr(i, 1)); // c= ith character of s
+      r = c + r; // r = c + r
+      i++;
+   }
+   cout << r << endl; //Print r  
+
+   return 0;
+}
