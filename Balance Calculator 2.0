@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{  
+   const double INITIAL_BALANCE = 10000;
+   const double TARGET = 2 * INITIAL_BALANCE;
+
+   double balance = INITIAL_BALANCE;
+   int year = 0;
+   
+   cout << "Interest rate in percent: " << endl;
+   double rate; 
+   cin >> rate;
+
+ while (balance < TARGET && year <= 19) // set the condition: we want to do calculate the total balance
+   //until the balance reaches the TARGET or until it's been 19 years, but not 20
+   {
+      double interest = balance * (rate / 100); // this is our interest rate
+      balance = balance + interest; // this is our total balance
+      year++; // this is the year (our counting variable)
+   }
+
+cout << "Year: " << year << endl;
+   cout << "Balance: " << balance << endl;
+
+   return 0;
+}
