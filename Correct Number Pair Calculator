@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a, b;
+
+    do // Here we configure the code so it will keep prompting the user until they type in the correct input
+    { 
+        cout << "Enter two positive integers, the first smaller than the second." << endl;
+        cout << "First: " << endl;
+        cin >> a;
+        cout << "Second: " << endl;
+        cin >> b;
+        
+    } while ((a > b) || (a <= 0) || (a == b));
+    
+    // Here we tell the code to only print this when the input is correct
+    cout << "You entered " << a << " and " << b << endl;
+
+    return 0;
+}
